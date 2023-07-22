@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+
 interface Prop {
   prod: {
     category: string;
@@ -14,7 +14,6 @@ interface Prop {
 }
 
 const ProductCart = ({ prod }: Prop) => {
-  const router = useRouter();
   const {
     id,
     image,
@@ -24,9 +23,6 @@ const ProductCart = ({ prod }: Prop) => {
     rating: { rate, count },
     title,
   } = prod;
-  const handleProduct = (id: number) => {
-    router.push(`/products/${id}`);
-  };
   return (
     <div>
       <div className=" md:border md:border-[#facb7a] h-[300px] mb-4 relative overflow-hidden group transition rounded-xl">
@@ -41,7 +37,7 @@ const ProductCart = ({ prod }: Prop) => {
           </div>
           <div className="mt-2">
             <div className="w-[200px] font-semibold cursor-pointer hover:underline overflow-hidden text-overflow-ellipsis whitespace-nowrap">
-              <div onClick={() => handleProduct(id)}>{title}</div>
+              <Link href={`/products/${id}`}>{title}</Link>
             </div>
 
             <div className="mt-1">

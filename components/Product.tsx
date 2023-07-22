@@ -1,7 +1,6 @@
 import ProductCart from "@/app/ProductCart";
 import React from "react";
 import SearchProduct from "./SearchProduct";
-// import { useSelector } from "react-redux";
 
 interface Props {
   product: [
@@ -17,7 +16,6 @@ interface Props {
   ];
 }
 const Product = ({ product }: Props) => {
-  // console.log(product);
   return (
     <div>
       <div className="py-10">

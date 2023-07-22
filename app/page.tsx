@@ -6,7 +6,7 @@ import { fetchProducts } from "./store/Features/product/ProductSlice";
 import { AppDispatch, RootState } from "./store/Store";
 import Product from "../components/Product";
 import Link from "next/link";
-import ProductDetails from "@/products/ProductDetails";
+// import ProductDetails from "@/products/ProductDetails";
 
 export default function Home() {
   const productRef = useRef(false);
